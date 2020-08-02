@@ -5,7 +5,7 @@
 
     $database = new Database();
     
-
+    
     if (isset($_POST) && !empty($_POST)) {
         if (isset($_POST['action'])) {
             switch ($_POST['action']) {
@@ -27,7 +27,7 @@
                         {   
                             /*
                                 !empty($_SESSION['cart_item']) == true
-                                tức là lúc này giỏ hàng đã có dữ liệu
+                                lúc này giỏ hàng đã có dữ liệu
                             */
                             if (isset($_SESSION['cart_item'][$product_id]))
                             /*

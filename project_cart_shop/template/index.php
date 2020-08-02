@@ -100,8 +100,8 @@
         <i class="fas fa-heart" style="color:black; margin: 20px;"></i>        
         <a href="cart.php" style="text-decoration: none; color:black; margin: 20px;">
           <i class="fas fa-shopping-cart icon"></i>
-          <?php $result = $database->numProduct($_SESSION['cart_item']);?>
-          <span style="background-color: red; border-radius: 25%; color: white; text-align: center; visibility: <?php echo ($result !== 0) ? 'visible' : 'hidden'; ?>;"><?php echo @$result; ?></span>
+          <?php $result = (isset($_SESSION['cart_item']) && !empty($_SESSION['cart_item'])) ? $database->numProduct($_SESSION['cart_item']) : 0;?>
+          <span style="font-size: 10px; vertical-align: super; background-color: red; border-radius: 100%; color: white; text-align: center; visibility: <?php echo ($result !== 0) ? 'visible' : 'hidden'; ?>;"><?php echo ($result <= 9) ? $result : '9+'; ?></span>
         </a>
         <i class="fas fa-search" style="color:black; margin: 20px;"></i>
       </div>
