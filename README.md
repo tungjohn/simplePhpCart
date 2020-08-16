@@ -1,2 +1,2 @@
 # simplePhpCart
-Giỏ hàng đơn giản PHP và MySQL
+Giỏ hàng đơn giản với PHP thuần và MySQL
