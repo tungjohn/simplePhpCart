@@ -56,41 +56,16 @@
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Hand Bag
+              Products
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="product_lv.php">Louis Vuitton</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Hermes</a>
+              <a class="dropdown-item" href="#">####</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Furla</a>
+              <a class="dropdown-item" href="#">####</a>
             </div>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Sun Glasses
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">D&G</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">GUCCI</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Rayban</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Perfume
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Tom Ford</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Armani</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Versace</a>
-            </div>
-          </li>
- 
         </ul>
         
         
@@ -101,7 +76,8 @@
         <a href="cart.php" style="text-decoration: none; color:black; margin: 20px;">
           <i class="fas fa-shopping-cart icon"></i>
           <?php $result = (isset($_SESSION['cart_item']) && !empty($_SESSION['cart_item'])) ? $database->numProduct($_SESSION['cart_item']) : 0;?>
-          <span style="font-size: 10px; vertical-align: super; background-color: red; border-radius: 100%; color: white; text-align: center; visibility: <?php echo ($result !== 0) ? 'visible' : 'hidden'; ?>;"><?php echo ($result <= 9) ? $result : '9+'; ?></span>
+          <span class="badge badge-danger badge-counter" style="<?php echo ($result !== 0) ? 'visible' : 'hidden'; ?>"><?php echo ($result <= 9) ? $result : '9+'; ?></span>
+     
         </a>
         <i class="fas fa-search" style="color:black; margin: 20px;"></i>
       </div>
